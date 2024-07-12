@@ -382,18 +382,10 @@ class BuildCommand extends Command {
         break;
       case PlatformType.macos:
         await _getMacosDependencies();
-        switch (arch){
-          case Arch.arm64:
-            final String arch_name = "arm64";
-            break;
-          case Arch.amd64:
-            final String arch_name = "amd64";
-            break;
-        }
         _buildDistributor(
           platform: platform,
           targets: "dmg",
-          args: "--description ${arch_name}",
+          args: "--description ${archName}",
         );
         break;
     }
