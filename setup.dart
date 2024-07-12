@@ -57,6 +57,11 @@ class Build {
           archName: 'amd64',
         ),
         BuildLibItem(
+        platform: PlatformType.macos,
+        arch: Arch.arm64,
+        archName: 'arm64', // Use 'arm64' as the architecture name
+        ),
+        BuildLibItem(
           platform: PlatformType.windows,
           arch: Arch.amd64,
           archName: 'amd64',
